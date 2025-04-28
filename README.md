@@ -10,24 +10,23 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main() {
+    char a, b, c;
+    printf("Enter first character: ");
+    scanf(" %c", &a);
+    printf("Enter second character: ");
+    scanf(" %c", &b);
+    printf("Enter third character: ");
+    scanf(" %c", &c);
+    printf("Characters in reverse order: %c %c %c\n", c, b, a);
+    return 0;
+}
+```
 ## OUTPUT:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Screenshot 2025-04-28 122431](https://github.com/user-attachments/assets/18d78e20-7ca0-49ce-aa28-3b1f792c95ca)
 
 ## RESULT:
 Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
@@ -46,26 +45,26 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
-
+```
+#include <stdio.h>
+int main() {
+    int A;
+    scanf("%d", &A);
+    if (A > 0) {
+        printf("A is a positive number.\n");
+    } else {
+        printf("A is not a positive number.\n");
+    }
+    return 0;
+}
+```
 # OUTPUT:
-
-
-
-
-
-
-
-
-
+![Screenshot 2025-04-28 122457](https://github.com/user-attachments/assets/d0652f63-c9e8-4282-bd4a-08329bffcadd)
 
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
  
- 
- 
-
-
 # EX-03- Operators-Expressions
 ## AIM:
 Write a program to find minimum between two fraction numbers using conditional operator or ternary operator.
@@ -80,16 +79,18 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main(){
+    int num1, num2, min1;
+    scanf("%d%d%d", &num1, &num2,&min1);
+    min1 = (num1 < num2) ? num1 : num2;
+    printf("Minimum between %d and %d is %d", num1, num2, min1);
+    return 0;
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
+![Screenshot 2025-04-28 122855](https://github.com/user-attachments/assets/5d847b8d-754d-4076-bc07-e5ad576a148e)
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
@@ -111,18 +112,23 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main() {
+    int value;  
+    printf("Enter a value: ");
+    scanf("%d", &value);   
+    if (value == 1) {
+        printf("The input value is equal to 1.\n");  
+    }
+    else {
+        printf("The input value is not equal to 1.\n");  
+    }
+    return 0;  
+}
+```
 ## OUTPUT:
-
-
-
-
-
-
-
-
-
-	
+![Screenshot 2025-04-28 122927](https://github.com/user-attachments/assets/97bc860e-9696-42b4-b691-418627539ed8)
 
 ## RESULT:
 Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
@@ -147,8 +153,41 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int m1, m2, m3;    
+    float tot, per;
+    printf("Enter marks for subject 1: ");
+    scanf("%d", &m1);
+    printf("Enter marks for subject 2: ");
+    scanf("%d", &m2);
+    printf("Enter marks for subject 3: ");
+    scanf("%d", &m3);
+    tot = m1 + m2 + m3;
+    per = tot / 3;
+    printf("Total Marks = %.2f\n", tot);
+    printf("Percentage = %.2f%%\n", per);
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+        if (per >= 60) {
+            printf("Division = First\n");
+        }
+        else if (per >= 48) {
+            printf("Division = Second\n");
+        }
+        else if (per >= 36) {
+            printf("Division = Pass\n");
+        }
+    }
+    else {
+        printf("Division = Fail\n");
+    }
+    return 0; 
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-28 122935](https://github.com/user-attachments/assets/05ddceaa-bfba-4416-96d5-dd0e0be1f883)
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
